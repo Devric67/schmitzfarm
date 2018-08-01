@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<CustomShader version="3">
+    <Parameters>
+        <Parameter name="partScale" target="partScale" type="float4"/>
+        <Parameter name="rainScale" target="rainScale" type="float4"/>
+    </Parameters>
+    <Textures>
+        <Texture name="sunsetTexture" />
+        <Texture name="nightTexture" />
+        <Texture name="sunriseTexture" />
+        <Texture name="rainTexture" />
+    </Textures>
+    <LodLevel startDistance="0" subsequentPassForceMode="ignore">
+        <CodeInjections>
+            <CodeInjection position="VS_END">
+<![CDATA[
+Out.position.z = Out.position.w;
+]]>
+            </CodeInjection>
+            <CodeInjection position="SAMPLERS">
+<![CDATA[
+sampler2D sunsetTexture;
+sampler2D nightTexture;
+sampler2D sunriseTexture;
+sampler2D rainTexture;
+]]>
+            </CodeInjection>
+            <CodeInjection position="MATERIALINFO">
+<![CDATA[
+uniform float4 partScale;
+uniform float4 rainScale;
+]]>
+            </CodeInjection>
+            <CodeInjection position="EMISSIVE_FS">
+<![CDATA[
+
+float3 emissiveColorSunset = tex2D(sunsetTexture, In.vs.ALBEDOMAP_TEXCOORD).xyz;
+float3 emissiveColorNight = tex2D(nightTexture, In.vs.ALBEDOMAP_TEXCOORD).xyz;
+float3 emissiveColorSunrise = tex2D(sunriseTexture, In.vs.ALBEDOMAP_TEXCOORD).xyz;
+float3 emissiveColorRain = tex2D(rainTexture, In.vs.ALBEDOMAP_TEXCOORD).xyz;
+emissiveColor.xyz = emissiveColor.xyz*partScale.x + emissiveColorSunset.xyz*partScale.y + emissiveColorNight.xyz*partScale.z + emissiveColorSunrise.xyz*partScale.w + emissiveColorRain*rainScale.x;
+
+]]>
+            </CodeInjection>
+        </CodeInjections>
+    </LodLevel>
+</CustomShader>

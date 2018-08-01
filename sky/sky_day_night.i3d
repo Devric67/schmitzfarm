@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="untitled" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="7.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="2" filename="DAY_sky_4K.dds" relativePath="true"/>
+    <File fileId="5" filename="NIGHT_sky.dds" relativePath="true"/>
+    <File fileId="7" filename="OVERCAST_sky_4K.dds" relativePath="true"/>
+    <File fileId="6" filename="SUNRISE_sky_4K.dds" relativePath="true"/>
+    <File fileId="4" filename="SUNSET_sky_4K.dds" relativePath="true"/>
+    <File fileId="3" filename="skyShader.xml" relativePath="true"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="lambert1" materialId="7" diffuseColor="0 0 0 1" ambientColor="0 0 0" allowFog="false" customShaderId="3">
+      <Emissivemap fileId="2" wrap="false"/>
+      <Custommap name="sunsetTexture" fileId="4" wrap="false"/>
+      <Custommap name="nightTexture" fileId="5" wrap="false"/>
+      <Custommap name="sunriseTexture" fileId="6" wrap="false"/>
+      <Custommap name="rainTexture" fileId="7" wrap="false"/>
+      <CustomParameter name="partScale" value="1 0 0 0"/>
+      <CustomParameter name="rainScale" value="0 0 0 0"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="sky_day_night.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="sky" translation="0 190 0" scale="2 1.75 2" objectMask="16777215" nodeId="10" materialIds="7"/>
+  </Scene>
+
+</i3D>
