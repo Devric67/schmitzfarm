@@ -1,33 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="37">
-    <author>your name here</author>
+    <author>Devric</author>
     <version>1.0.0.0</version>
 
     <title>
-        <en>Starter Map 17</en>
-        <de>Starter Map 17</de>
-        <fr>Starter Map 17</fr>
+        <en>Schmitz Ranch</en>
     </title>
 
     <description>
-        <en> <![CDATA[Welcome to the Starter Map 17.
-
-- This map includes all Farming Simulator 17 features.
-- Custom crop, ground, and foliage textures.
-- Animated Gates, Doors, and Lights.
-- Custom sky textures, Multi Terrain Angle added, and Chopped Straw added. ]]></en>
-        <de> <![CDATA[Welcome to the Starter Map 17.
-
-- This map includes all Farming Simulator 17 features.
-- Custom crop, ground, and foliage textures.
-- Animated Gates, Doors, and Lights.
-- Custom sky textures, Multi Terrain Angle added, and Chopped Straw added. ]]></de>
-        <fr> <![CDATA[Welcome to the Starter Map 17.
-
-- This map includes all Farming Simulator 17 features.
-- Custom crop, ground, and foliage textures.
-- Animated Gates, Doors, and Lights.
-- Custom sky textures, Multi Terrain Angle added, and Chopped Straw added. ]]></fr>
+        <en> <![CDATA[Welcome to Schmitz Ranch!]]></en>
     </description>
 
     <iconFilename>icon.png</iconFilename>
@@ -36,27 +17,21 @@
     <l10n>
         <text name="input_GATE_MOVE">
             <en>Gate Open/Close</en>
-            <de>Tor öffnen/schließen</de>
         </text>
         <text name="input_ANIMATED_OBJECT_OPEN_DOOR">
             <en>Open door</en>
-            <de>Tür öffnen</de>
         </text>
         <text name="input_ANIMATED_OBJECT_CLOSE_DOOR">
             <en>Close door</en>
-            <de>Tür schließen</de>
         </text>
         <text name="input_ANIMATED_OBJECT_OPEN_GATE">
             <en>Open gate</en>
-            <de>Tor öffnen</de>
         </text>
         <text name="input_ANIMATED_OBJECT_CLOSE_GATE">
             <en>Close gate</en>
-            <de>Tor schließen</de>
         </text>
         <text name="input_LIGHTSWITCH_CLICK">
             <en>Lightswitch on/off</en>
-            <de>Lichtschalter an/aus</de>
         </text>
     </l10n>
 
@@ -78,14 +53,10 @@
     <maps>
         <map id="SampleModMap" className="ModMap" filename="ModMap.lua" configFilename="maps/map01.xml" defaultVehiclesXMLFilename="defaultVehicles.xml">
             <title>
-                <en>Starter Map 17</en>
-                <de>Starter Map 17</de>
-                <fr>Starter Map 17</fr>
+                <en>Schmitz Ranch</en>
             </title>
             <description>
-                <en>Welcome to Starter Map 17.</en>
-                <de>Welcome to Starter Map 17.</de>
-                <fr>Welcome to Starter Map 17.</fr>
+                <en>Welcome to Schmitz Ranch!</en>
             </description>
             <iconFilename>maps/map01_preview.png</iconFilename>
         </map>
